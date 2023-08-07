@@ -8,7 +8,7 @@
 </br>自动识别文本特征输出对应的校验文件（.sha或.md5）。
 </br>支持处理<a href="https://goodbest.github.io/anime_hash/index.html">Anime hash保管库</a>中的文件列表（仅限SHA-1和MD5）。
 
-</br>代码由GhatGPT生成。
+</br><b>代码由GhatGPT生成。</b>
 
 </br>需要以下系统环境：
 </br>Python：确保在您的系统上安装了Python。您可以从<a href="https://www.python.org/downloads/">Python官方网站</a>下载并按照特定于您的操作系统的安装说明进行安装。
