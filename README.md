@@ -1,4 +1,4 @@
-<b>HashListConverter</b>
+# HashListConverter
 
 </br>将<a href="https://kts.sakaiweb.com/hashlister.html">HashLister</a>生成的txt文件（仅支持算法为SHA-1或MD5的“CRC list”格式）转换为用于Total Commander校验的sha或md5文件。
 
