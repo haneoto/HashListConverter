@@ -1,4 +1,4 @@
-﻿import os
+import os
 import re
 import tkinter as tk
 from tkinter import filedialog
@@ -30,6 +30,9 @@ def move_continuous_chars_to_start(line, char_limit=40):
 
     return line
 
+def clear_result():
+    result_label.config(text="")
+
 def detect_encoding(file_path):
     with open(file_path, 'rb') as f:
         rawdata = f.read()
@@ -54,6 +57,7 @@ def process_file(input_file, output_file):
         file.writelines([line + '\n' for line in processed_lines])
 
 def browse_file(entry):
+    clear_result()
     file_path = filedialog.askopenfilename(filetypes=[("Text Files", "*.txt")])
     if file_path:
         entry.delete(0, tk.END)
@@ -71,6 +75,7 @@ def browse_output_folder(entry):
         entry.config(fg="black")
 
 def process_files():
+    clear_result()
     input_file = input_file_entry.get()
     output_folder = output_folder_entry.get()
 
@@ -117,6 +122,7 @@ def process_files():
         result_label.config(text="Please choose an input file first.")
 
 def on_drop(event):
+    clear_result()
     file_path = event.data.strip('{}')
     if os.path.isfile(file_path) and file_path.lower().endswith('.txt'):
         input_file_entry.delete(0, tk.END)
